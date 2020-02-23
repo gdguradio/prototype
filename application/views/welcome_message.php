@@ -192,27 +192,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					// });
 					
-					$.ajax({
-						type: 'POST',
-						url: baseUrl + '/welcome/getData',
-						dataType: "json",
-						success: function(data) {
-							console.log(data)
-							$('#q1 .answer').text(data[0].name)
-						}
-
-					});
-
 					// $.ajax({
 					// 	type: 'POST',
 					// 	url: baseUrl + '/welcome/getData',
 					// 	dataType: "json",
 					// 	success: function(data) {
 					// 		console.log(data)
-					// 		$('#q1 .answer').text(data[0].species)
+					// 		$('#q1 .answer').text(data[0].name)
 					// 	}
 
 					// });
+
+					$.ajax({
+						type: 'POST',
+						url: baseUrl + '/welcome/getData',
+						dataType: "json",
+						success: function(data) {
+							console.log(data)
+							$('#q1 .answer').text(data[0].species)
+						}
+
+					});
 					// $.ajax({
 					// 	type: 'POST',
 					// 	url: baseUrl + '/welcome/getData',
@@ -248,7 +248,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- <div id="curve"></div> -->
 			</div>
 			<div id='q1'>
-				<h1 class='title'>What character(person) appeared in the most of StarWars films?</h1>
+				<h1 class='title'>What species appeared in the most number of StarWars films?</h1>
 				<h1 class='answer'></h1>
 			</div>
 		</div>
