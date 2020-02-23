@@ -181,16 +181,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$("#innerbuttonDiv").click(function(){
 					var baseUrl = '<?php echo site_url()?>';
 
-					// $.ajax({
-					// 	type: 'POST',
-					// 	url: baseUrl + '/welcome/getData',
-					// 	dataType: "json",
-					// 	success: function(data) {
-					// 		console.log(data)
-					// 		$('#q1 .answer').text(data[0].title)
-					// 	}
+					$.ajax({
+						type: 'POST',
+						url: baseUrl + '/welcome/getData',
+						dataType: "json",
+						success: function(data) {
+							console.log(data)
+							$('#q1 .answer').text(data[0].title)
+						}
 
-					// });
+					});
 					
 					// $.ajax({
 					// 	type: 'POST',
@@ -213,16 +213,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					// 	}
 
 					// });
-					$.ajax({
-						type: 'POST',
-						url: baseUrl + '/welcome/getData',
-						dataType: "json",
-						success: function(data) {
-							console.log(data)
-							$('#q1 .answer').text('Planet:' + data[0].planetname+  '- Pilots : ('+data[0].count+') '+data[0].name +'-'+ data[0].species)
-						}
+					// $.ajax({
+					// 	type: 'POST',
+					// 	url: baseUrl + '/welcome/getData',
+					// 	dataType: "json",
+					// 	success: function(data) {
+					// 		console.log(data)
+					// 		$('#q1 .answer').text('Planet:' + data[0].planetname+  '- Pilots : ('+data[0].count+') '+data[0].name +'-'+ data[0].species)
+					// 	}
 
-					});
+					// });
 
 
 				})
