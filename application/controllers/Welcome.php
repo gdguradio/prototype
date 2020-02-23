@@ -36,8 +36,8 @@ class Welcome extends CI_Controller {
 	public function getData(){
 		// $query = $this->model->loadlongestopeningcrawl();
 		// $query = $this->model->loadmostappearance();
-		$query = $this->model->loadmostappearancespecies();
-		// $query = $this->model->loadmostpilot();
+		// $query = $this->model->loadmostappearancespecies();
+		$query = $this->model->loadmostpilot();
 		
         if($query){
             echo json_encode($query,JSON_UNESCAPED_UNICODE);

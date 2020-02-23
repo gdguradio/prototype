@@ -203,26 +203,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					// });
 
-					$.ajax({
-						type: 'POST',
-						url: baseUrl + '/welcome/getData',
-						dataType: "json",
-						success: function(data) {
-							console.log(data)
-							$('#q1 .answer').text(data[0].species)
-						}
-
-					});
 					// $.ajax({
 					// 	type: 'POST',
 					// 	url: baseUrl + '/welcome/getData',
 					// 	dataType: "json",
 					// 	success: function(data) {
 					// 		console.log(data)
-					// 		$('#q1 .answer').text('Planet:' + data[0].planetname+  '- Pilots : ('+data[0].count+') '+data[0].name +'-'+ data[0].species)
+					// 		$('#q1 .answer').text(data[0].species)
 					// 	}
 
 					// });
+					$.ajax({
+						type: 'POST',
+						url: baseUrl + '/welcome/getData',
+						dataType: "json",
+						success: function(data) {
+							console.log(data)
+							$('#q1 .answer').text('Planet:' + data[0].planetname+  '- Pilots : ('+data[0].count+') '+data[0].name +'-'+ data[0].species)
+						}
+
+					});
 
 
 				})
@@ -248,7 +248,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- <div id="curve"></div> -->
 			</div>
 			<div id='q1'>
-				<h1 class='title'>What species appeared in the most number of StarWars films?</h1>
+				<h1 class='title'>What planet in the StarWars universe provided the largest number of vehicle pilots?</h1>
 				<h1 class='answer'></h1>
 			</div>
 		</div>
