@@ -181,27 +181,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$("#innerbuttonDiv").click(function(){
 					var baseUrl = '<?php echo site_url()?>';
 
-					$.ajax({
-						type: 'POST',
-						url: baseUrl + '/welcome/getData',
-						dataType: "json",
-						success: function(data) {
-							console.log(data)
-							$('#q1 .answer').text(data[0].title)
-						}
-
-					});
-					
 					// $.ajax({
 					// 	type: 'POST',
 					// 	url: baseUrl + '/welcome/getData',
 					// 	dataType: "json",
 					// 	success: function(data) {
 					// 		console.log(data)
-					// 		$('#q1 .answer').text(data[0].name)
+					// 		$('#q1 .answer').text(data[0].title)
 					// 	}
 
 					// });
+					
+					$.ajax({
+						type: 'POST',
+						url: baseUrl + '/welcome/getData',
+						dataType: "json",
+						success: function(data) {
+							console.log(data)
+							$('#q1 .answer').text(data[0].name)
+						}
+
+					});
 
 					// $.ajax({
 					// 	type: 'POST',
@@ -248,7 +248,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- <div id="curve"></div> -->
 			</div>
 			<div id='q1'>
-				<h1 class='title'>Which of all the StarWars movies has longest opening crawl?</h1>
+				<h1 class='title'>What character(person) appeared in the most of StarWars films?</h1>
 				<h1 class='answer'></h1>
 			</div>
 		</div>
